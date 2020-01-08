@@ -22,18 +22,22 @@
     <div class="d-flex align-contents-center">
       <div class="row">
         <div class="col-10 bg-light m-3">
-          <h1 class="text-center">Random Password Generator</h1>
+          <h1 class="text-center m-1">Random Password Generator</h1>
           <p class="text-justify"> Strong passwords are a key element of cybersecurity.
             This program will help you develop a complex password that can
             be copied for use elsewhere.</p>
           <hr>
-          <label for="customRange2">Slide for Password length, from 8 characters on left to 128 characters on right, the
-            longer the better</label>
+          <label for="customRange2">Slide to select the Password length (from 8 characters on left to 128 characters on right, <em>the
+            longer the better</em>)</label>
           <input type="range" class="custom-range" min="8" max="128" id="customRange2">
+          <div class="d-flex justify-content-between">
 
+         <h6>8</h6> <h6>38</h6> <h6>68</h6> <h6>98</h6> <h6>128</h6>
+        </div>
           <div class="container-fluid">
             <hr>
-            <p class="text-justify"> Click on elements to include, more elements means more secure</p>
+            <p class="text-center"> Click on elements to include, more elements means more secure 
+                                          (select <em>at least</em> one type)</p>
             <div class="row">
               <div class="col-6">
                 <div class="form-check">
@@ -78,6 +82,11 @@
             <button type="button" class="btn btn-success m-1">Generate and copy to clipboard</button>
           </div>
           <hr>
+          <div class="row col-12 mr-3 justify-content-around">
+            <div class="alert alert-success" role="alert">
+              Your Password Here
+            </div>
+          </div>
         </div>
       </div>
     </div>
