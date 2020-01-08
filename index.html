@@ -1,36 +1,87 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- link to my CSS-->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
-    <title>Hello, world!</title>
-  </head>
-  <body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <div class="container">
+  <!-- link to my CSS-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="d-flex align-contents-center">
       <div class="row">
-        <div class="col-10 m-3 align-contents-center">
+        <div class="col-10 bg-light m-3">
           <h1 class="text-center">Random Password Generator</h1>
-          <p class="text-justify"> Strong passwords are a key element of cybersecurity. 
-             class="text-justify"This program will help you develop a complex password that can 
+          <p class="text-justify"> Strong passwords are a key element of cybersecurity.
+            This program will help you develop a complex password that can
             be copied for use elsewhere.</p>
+          <label for="customRange2">Slide for Password length, from 8 characters on left to 128 characters on right, the
+            longer the better</label>
+          <input type="range" class="custom-range" min="8" max="128" id="customRange2">
+
+          <div class="container">
+            <p class="text-justify"> Click on elements to include, more elements means more secure</p>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="lowerCase">
+                  <label class="form-check-label" for="lowerCase">
+                    Lower case letters
+                  </label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="upperCase">
+                  <label class="form-check-label" for="upperCase">
+                    Upper case letters
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="numericCharacters">
+                  <label class="form-check-label" for="numericCharacters">
+                    Numeric Characters
+                  </label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="specialCharacters">
+                  <label class="form-check-label" for="specialCharacters">
+                    Special characters
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>
+  </div>
 
 
-    <!-- link to my javascript-->
-    <script type="text/javascript" src="myJS.js">
-    </script>
-  
-    
-  </body>
+  <!-- link to my javascript-->
+  <script type="text/javascript" src="myJS.js">
+  </script>
+
+
+</body>
+
 </html>
