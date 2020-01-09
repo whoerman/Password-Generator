@@ -5,9 +5,12 @@ let numericArray = ["1","2","3","4","5"];
 let specialArray = ["~","!","#","*"];
 let sampleArry = [];
 
-/* getting string length from range slider */
-let passwordNumber = document.getElementById("passwordLength")
+/* getting passwrod length from range slider */
 
+let passwordNumber = document.getElementById("passwordLength")
+let passwordSizeNum = document.getElementById("passwordLength")
+console.log(passwordNumber)
+console.log(passwordSizeNum)
 
 /* getting the data from checkboxes when button clicked */
 let lowerOption = document.getElementById("lowerCase");
