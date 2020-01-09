@@ -1,25 +1,30 @@
+/* establishing the variables */
+let passwordLength = 0
+let lowerCase = false
+let upperCase = false
+let numericCharacters = false
+let specialCharacters = false
+let displayOnly = false
+let displayAndCopy = false
 
-let answerFirst = true;
-let answerSecond = true;
-let answerThird = true;
+/* getting data once the button is clicked for diplay button*/
 
 
-function f1() {
-    if (document.getElementById("DefaultCheck1").checked) {
-        let answerFirst = true;
-    } else {
-        let answerFirst = false;
-    }
-    if (document.getElementById("DefaultCheck2").checked) {
-        let answerSecond = true;
-    } else {
-        let answersecond = false;
-    }
 
-    if (document.getElementById("DefaultCheck3").checked) {
-        let answerThird = true;
-     } else {
-        let answerThird = false;
-    } 
+/* getting data once the button is clicked for copy button */
 
-    alert(answerFirst + answerSecond + answerThird);
+
+/* funstion for generating the password*/
+function generatePassword() {
+
+}
+
+/* function for display without clipping */
+function displayFunction() {
+
+}
+
+/* function for display with clipping */
+function copyFunction() {
+
+}

@@ -1,27 +1,34 @@
 body {
-    background: url("binary.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+  background: url("binary.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+h1 {
+  /* Extra small devices (phones, less than 768px) */
+  font-size: 1.2em;
+
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.4em;
   }
 
-  h1 {
-    /* Extra small devices (phones, less than 768px) */
-    font-size: 30px;
-  
-    /* Small devices (tablets, 768px and up) */
-    @media (min-width: 768px) {
-      font-size: 40px;
-    }
-  
-    /* Medium devices (desktops, 992px and up) */
-    @media (min-width: 992px) {
-      font-size: 60px;
-    }
-  
-    /* Large devices (large desktops, 1200px and up) */
-    @media (min-width: 1200px) {
-      font-size: 80px;
-    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  h1 { font-size: 1.5em;
   }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  h1 { font-size: 1.8em;
+  }
+}

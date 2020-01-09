@@ -27,23 +27,27 @@
             This program will help you develop a complex password that can
             be copied for use elsewhere.</p>
           <hr>
-          <label for="customRange2">Slide to select the Password length (from 8 characters on left to 128 characters on right, <em>the
-            longer the better</em>)</label>
-          <input type="range" class="custom-range" min="8" max="128" id="customRange2">
+          <label for="passwordLength">Slide to select the Password length (from 8 characters on left to 128 characters on
+            right, <em>the
+              longer the better</em>)</label>
+          <input type="range" class="custom-range" min="8" max="128" id="passwordLength">
           <div class="d-flex justify-content-between">
-
-         <h6>8</h6> <h6>38</h6> <h6>68</h6> <h6>98</h6> <h6>128</h6>
-        </div>
+            <h6>8</h6>
+            <h6>38</h6>
+            <h6>68</h6>
+            <h6>98</h6>
+            <h6>128</h6>
+          </div>
           <div class="container-fluid">
             <hr>
-            <p class="text-center"> Click on elements to include, more elements means more secure 
-                                          (select <em>at least</em> one type)</p>
+            <p class="text-center"> Click on elements to include, more elements means more secure
+              (select <em>at least</em> one type)</p>
             <div class="row">
               <div class="col-6">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="lowerCase">
                   <label class="form-check-label" for="lowerCase">
-                    Lower case letters
+                    Lower case letters (a,b,c,d,...)
                   </label>
                 </div>
               </div>
@@ -51,7 +55,7 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="upperCase">
                   <label class="form-check-label" for="upperCase">
-                    Upper case letters
+                    Upper case letters (A,B,C,D,...)
                   </label>
                 </div>
               </div>
@@ -61,7 +65,7 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="numericCharacters">
                   <label class="form-check-label" for="numericCharacters">
-                    Numeric Characters
+                    Numeric Characters (1.2.3.4...)
                   </label>
                 </div>
               </div>
@@ -69,7 +73,7 @@
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="specialCharacters">
                   <label class="form-check-label" for="specialCharacters">
-                    Special characters
+                    Special characters (#,$,%,!,...)
                   </label>
                 </div>
               </div>
@@ -77,9 +81,17 @@
 
           </div>
           <hr>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="copyToClipboard">
+              <label class="form-check-label" for="copyToClipboard" >
+                Click here <em>now</em>to copy the password to your computer clipboard when it is generated.
+              </label>
+            </div>
+          </div>
+          <hr>
           <div class="row col-12 mr-3 justify-content-around">
-            <button type="button" class="btn btn-success m-1">Generate and display the password</button>
-            <button type="button" class="btn btn-success m-1">Generate and copy to clipboard</button>
+            <button type="button" class="btn btn-success m-1" onclick="displayfunction()">Generate and display the password</button>
           </div>
           <hr>
           <div class="row col-12 mr-3 justify-content-around">
