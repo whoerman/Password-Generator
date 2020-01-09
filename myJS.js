@@ -1,30 +1,24 @@
-/* establishing the variables */
-let passwordLength = 0
-let lowerCase = false
-let upperCase = false
-let numericCharacters = false
-let specialCharacters = false
-let displayOnly = false
-let displayAndCopy = false
+/* getting the data from checkboxes when button clicked */
 
-/* getting data once the button is clicked for diplay button*/
+let lowerOption = document.getElementById("lowerCase")
+let upperOption = document.getElementById("upperCase")
+let numericOption = document.getElementById("numericCharacters")
+let specialOption = document.getElementById("specialCharacters")
+let copyOption = document.getElementById("copyToClipboard")
 
 
+document.getElementById("submit-btn").addEventListener("click", function (event) {
+    // pulling out the event object and preventing the browser from refreshing the page
+    event.preventDefault();
+    console.log("Lower case is " + lowerOption.checked);
+    console.log("Upper case is " + upperOption.checked);
+    console.log(" Numeric is " + numericOption.checked);
+    console.log("Special is " + specialOption.checked);
+    console.log("Copy to Clipboard is " + copyOption.checked);
 
-/* getting data once the button is clicked for copy button */
-
-
-/* funstion for generating the password*/
-function generatePassword() {
-
-}
-
-/* function for display without clipping */
-function displayFunction() {
-
-}
-
-/* function for display with clipping */
-function copyFunction() {
-
-}
+    if (lowerOption.checked == true) {
+        console.log("true for lower case")
+    } else {
+        console.log ("false for lower case")
+    }
+});
