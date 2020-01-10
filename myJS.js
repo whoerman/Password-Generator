@@ -1,3 +1,5 @@
+
+
 /* setting up the character arrays */
 let lowerCaseArray = ["a", "b", "c", "d", "e","f", "g", "h", "i", "j","k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"];
 let upperCaseArray = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J","K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -36,7 +38,7 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
 
         if (lowerOption.checked == false && upperOption.checked == false && numericOption.checked == false &&
                 specialOption.checked == false) {
-                    document.write(`You chose nothing, so you get nothing! refresh the page and try again...`)
+                    window.open("./nothing.html");
                     return;
                 }
         //add lower case letters to array if selected
@@ -87,7 +89,7 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
 
         console.log (`Password result: ${PWFinal}`);
 
-        document.write(`Your password is ${passwordNumber} characters long. This is your password ${PWFinal}`)
+        window.open("./result.html");
 
         /*copy password to clipboard*/
 
@@ -103,4 +105,3 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
     } else {
     }
 });
-
