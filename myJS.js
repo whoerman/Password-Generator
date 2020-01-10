@@ -87,7 +87,7 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
 
         console.log (`Password result: ${PWFinal}`);
 
-        document.write("This is your password: " + PWFinal)
+        document.write(`Your password is ${passwordNumber} characters long. This is your password ${PWFinal}`)
 
         /*copy password to clipboard*/
 
