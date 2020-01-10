@@ -8,11 +8,6 @@ let passwordInitiator = 0;
 let currentPWitem = ""
 let PWFinal =""
 
-/* getting passwrod length from range slider 
-will do a place holder value of 5 until i figure it out*/
-
-let passwordNumber = 5
-
 /* setting the data from checkboxes when button clicked */
 let lowerOption = document.getElementById("lowerCase");
 let upperOption = document.getElementById("upperCase");
@@ -22,6 +17,8 @@ let copyOption = document.getElementById("copyToClipboard");
 
 
 document.getElementById("submit-btn").addEventListener("click", function (event) {
+
+    //used to start process - probably another way to do it
     let passwordInitiator = 1
 
     //get password length from range slider
@@ -33,8 +30,15 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
 
     // building the master array from subsets selected
     
-    if (passwordInitiator = 1) {
+    if (passwordInitiator > 0) {
 
+        //make sure they checked a box
+
+        if (lowerOption.checked == false && upperOption.checked == false && numericOption.checked == false &&
+                specialOption.checked == false) {
+                    document.write(`You chose nothing, so you get nothing! refresh the page and try again...`)
+                    return;
+                }
         //add lower case letters to array if selected
         if (lowerOption.checked == true) {
             sampleArray = sampleArray.concat(lowerCaseArray);
@@ -82,6 +86,8 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
         }
 
         console.log (`Password result: ${PWFinal}`);
+
+        document.write("This is your password: " + PWFinal)
 
         /*copy password to clipboard*/
 
