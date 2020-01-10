@@ -1,17 +1,15 @@
 /* setting up the character arrays */
-let lowerCaseArray = ["a", "b", "c", "d", "e"];
-let upperCaseArray = ["A", "B", "C", "D", "E"];
-let numericArray = ["1", "2", "3", "4", "5"];
+let lowerCaseArray = ["a", "b", "c", "d", "e","f", "g", "h", "i", "j","k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"];
+let upperCaseArray = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J","K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+let numericArray = ["1", "2", "3", "4", "5","6", "7", "8", "9", "0"];
 let specialArray = ["~", "!", "#", "*", "<"];
 let sampleArray = [];
 let passwordInitiator = 0;
 let currentPWitem = ""
 let PWFinal =""
 
-console.log("password intitator before click is " + passwordInitiator);
-
 /* getting passwrod length from range slider 
-will do a place holder value of 20 until i figure it out*/
+will do a place holder value of 5 until i figure it out*/
 
 let passwordNumber = 5
 
@@ -25,30 +23,43 @@ let copyOption = document.getElementById("copyToClipboard");
 
 document.getElementById("submit-btn").addEventListener("click", function (event) {
     let passwordInitiator = 1
-    console.log("The password length is " + passwordNumber);
-    console.log("Copy to Clipboard is " + copyOption.checked);
-    console.log("password intitator after click is " + passwordInitiator);
 
-    /* adding the selected text type arrays together*/
+    //get password length from range slider
+
+    let rangeInput = document.getElementById("passwordLength").value;
+    let passwordNumber = rangeInput
+
+    console.log("The password length is " + passwordNumber);
+
+    // building the master array from subsets selected
+    
     if (passwordInitiator = 1) {
+
+        //add lower case letters to array if selected
         if (lowerOption.checked == true) {
             sampleArray = sampleArray.concat(lowerCaseArray);
         
         console.log("Lower case is " + lowerOption.checked + " so add it");
         console.log(sampleArray)
         }
+
+        //add upper case letters to array if selected
         if (upperOption.checked == true) {
             sampleArray = sampleArray.concat(upperCaseArray);
             
         console.log("Upper case is " + upperOption.checked + " so add it");      
         console.log(sampleArray)
         }
+
+        //add numeric characters to array if selected
         if (numericOption.checked == true) {
             sampleArray = sampleArray.concat(numericArray)
         
-        console.log(" Numeric is " + numericOption.checked + "so add it");
+        console.log(`Numeric is ${numericOption.checked} so add it to master array`);
         console.log(sampleArray)
         }
+
+        //add special characters to array if selected
         if (specialOption.checked == true) {
             sampleArray = sampleArray.concat(specialArray)
         
@@ -56,20 +67,32 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
         console.log(sampleArray)
         }
 
-        //genertaing the random selections from the concat array
+//genertaing the random selections from the master array
 
        for (i=0; i < passwordNumber; i++) {
             currentPWitem = sampleArray [Math.floor(Math.random() * Math.floor(sampleArray.length))];
 
-            console.log(currentPWitem);
+            console.log(`randamly chosen item is ${currentPWitem}`);
 
+            //adding the selected letter to the end of the password string
             PWFinal = PWFinal.concat(currentPWitem);
 
-            console.log (" inside loop password  " + PWFinal);
+            console.log ("add it to end of password  " + PWFinal);
             
         }
 
-        console.log (" outside loop password  " + PWFinal);
+        console.log (`Password result: ${PWFinal}`);
+
+        /*copy password to clipboard*/
+
+        
+        console.log("Copy to Clipboard is " + copyOption.checked);
+
+        /*var copyText = document.querySelector(PWFinal);
+            copyText.select();
+            document.execCommand("copy");
+
+            not currently working*/
 
     } else {
     }
