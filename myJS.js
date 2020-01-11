@@ -38,7 +38,7 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
 
         if (lowerOption.checked == false && upperOption.checked == false && numericOption.checked == false &&
                 specialOption.checked == false) {
-                    window.open("./nothing.html");
+                    window.open("./nothing.html","_self");
                     return;
                 }
         //add lower case letters to array if selected
@@ -89,7 +89,7 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
 
         console.log (`Password result: ${PWFinal}`);
 
-        window.open("./result.html");
+        /*window.open("./result.html","_self");*/
 
         /*copy password to clipboard*/
 
