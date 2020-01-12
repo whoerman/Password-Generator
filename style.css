@@ -6,32 +6,24 @@ body {
   -o-background-size: cover;
 }
 
-h1 {
-  /* Extra small devices (phones, less than 768px) */
-  font-size: 1.2em;
-}
-
 p {
   font-size: 1.2em;
-
 }
 
-/* Small devices (tablets, 768px and up) */
+
+h1 {
+  font-size: 1.2em;
+}
 @media (min-width: 768px) {
   h1 {
     font-size: 1.4em;
   }
-
 }
-
-/* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   h1 {
     font-size: 1.5em;
   }
 }
-
-/* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   h1 {
     font-size: 1.8em;
