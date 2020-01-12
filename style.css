@@ -11,12 +11,9 @@ h1 {
   font-size: 1.2em;
 }
 
-p { font-size: 1.2em;
+p {
+  font-size: 1.2em;
 
-}
-
-#password {
-  width: auto;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -29,12 +26,14 @@ p { font-size: 1.2em;
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  h1 { font-size: 1.5em;
+  h1 {
+    font-size: 1.5em;
   }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  h1 { font-size: 1.8em;
+  h1 {
+    font-size: 1.8em;
   }
 }

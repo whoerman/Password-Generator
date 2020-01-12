@@ -27,8 +27,8 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
     let rangeInput = document.getElementById("passwordLength").value;
     let passwordNumber = rangeInput
 
-                                                //just to show that the password length is set
-                                                console.log("The password length is " + passwordNumber);
+    //just to show that the password length is set
+    console.log("The password length is " + passwordNumber);
 
     // building the master array from subsets selected
     if (passwordInitiator > 0) {
@@ -44,36 +44,36 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
         if (lowerOption.checked == true) {
             sampleArray = sampleArray.concat(lowerCaseArray);
 
-                                                //just to show the adding of the lower case array to the sampling array
-                                                console.log("Lower case is " + lowerOption.checked + " so add it");
-                                                console.log(sampleArray)
+            //just to show the adding of the lower case array to the sampling array
+            console.log("Lower case is " + lowerOption.checked + " so add it");
+            console.log(sampleArray)
         }
 
         //add upper case letters to sampling array if selected
         if (upperOption.checked == true) {
             sampleArray = sampleArray.concat(upperCaseArray);
 
-                                                //just to show the adding of the upper case array to the sampling array
-                                                console.log("Upper case is " + upperOption.checked + " so add it");
-                                                console.log(sampleArray)
+            //just to show the adding of the upper case array to the sampling array
+            console.log("Upper case is " + upperOption.checked + " so add it");
+            console.log(sampleArray)
         }
 
         //add numeric characters to sampling array if selected
         if (numericOption.checked == true) {
             sampleArray = sampleArray.concat(numericArray)
 
-                                                //just to show the adding of the numeric array to the sampling array
-                                                console.log(`Numeric is ${numericOption.checked} so add it to master array`);
-                                                console.log(sampleArray)
+            //just to show the adding of the numeric array to the sampling array
+            console.log(`Numeric is ${numericOption.checked} so add it to master array`);
+            console.log(sampleArray)
         }
 
         //add special characters to sampling array if selected
         if (specialOption.checked == true) {
             sampleArray = sampleArray.concat(specialArray)
 
-                                                //just to show the adding of the special array to the sampling array
-                                                console.log("Special is " + specialOption.checked) + "so add it";
-                                                console.log(sampleArray)
+            //just to show the adding of the special array to the sampling array
+            console.log("Special is " + specialOption.checked) + "so add it";
+            console.log(sampleArray)
         }
 
         //generataing the random selections from the sampling array
@@ -81,31 +81,30 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
         for (i = 0; i < passwordNumber; i++) {
             currentPWitem = sampleArray[Math.floor(Math.random() * Math.floor(sampleArray.length))];
 
-                                                //just to show that a random letter has been selected
-                                                console.log(`Randamly chosen item is ${currentPWitem}`);
+            //just to show that a random letter has been selected
+            console.log(`Randamly chosen item is ${currentPWitem}`);
 
             //adding the selected letter to the end of the password string
             PWFinal = PWFinal.concat(currentPWitem);
 
-                                                //just to show the working password array as each letter is added
-                                                console.log("Add it to end of password  " + PWFinal);
+            //just to show the working password array as each letter is added
+            console.log("Add it to end of password  " + PWFinal);
 
         }
 
+        //alerting it because I can't display it to the page
         console.log(`Password result: ${PWFinal}`);
+        window.alert(`Your password is 
+        ${PWFinal}
+        
+        You can copy it by highlighting it and copying it.`);
 
-        /*window.open("./result.html","_self");*/
+
 
         /*copy password to clipboard*/
 
-
         console.log("Copy to Clipboard is " + copyOption.checked);
 
-        /*var copyText = document.querySelector(PWFinal);
-            copyText.select();
-            document.execCommand("copy");
-
-            not currently working*/
 
     } else {}
 });
