@@ -1,16 +1,16 @@
+//console logs have been left in to help show how the program funstions
 
-
-/* setting up the character arrays */
-let lowerCaseArray = ["a", "b", "c", "d", "e","f", "g", "h", "i", "j","k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y","z"];
-let upperCaseArray = ["A", "B", "C", "D", "E","F", "G", "H", "I", "J","K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-let numericArray = ["1", "2", "3", "4", "5","6", "7", "8", "9", "0"];
+// setting up the character arrays 
+let lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+let upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+let numericArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 let specialArray = ["~", "!", "#", "*", "<"];
 let sampleArray = [];
 let passwordInitiator = 0;
 let currentPWitem = ""
-let PWFinal =""
+let PWFinal = ""
 
-/* setting the data from checkboxes when button clicked */
+// setting the data from checkboxes for when button clicked 
 let lowerOption = document.getElementById("lowerCase");
 let upperOption = document.getElementById("upperCase");
 let numericOption = document.getElementById("numericCharacters");
@@ -24,76 +24,81 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
     let passwordInitiator = 1
 
     //get password length from range slider
-
     let rangeInput = document.getElementById("passwordLength").value;
     let passwordNumber = rangeInput
 
-    console.log("The password length is " + passwordNumber);
+                                                //just to show that the password length is set
+                                                console.log("The password length is " + passwordNumber);
 
     // building the master array from subsets selected
-    
     if (passwordInitiator > 0) {
 
-        //make sure they checked a box
-
+        //make sure they checked a box (an actual useful use of an alert!)
         if (lowerOption.checked == false && upperOption.checked == false && numericOption.checked == false &&
-                specialOption.checked == false) {
-                    window.open("./nothing.html","_self");
-                    return;
-                }
-        //add lower case letters to array if selected
+            specialOption.checked == false) {
+            alert("I can't make something out of nothing! You must choose at least one text type...");
+            return;
+        }
+
+        //add lower case letters to sampling array if selected
         if (lowerOption.checked == true) {
             sampleArray = sampleArray.concat(lowerCaseArray);
-        
-        console.log("Lower case is " + lowerOption.checked + " so add it");
-        console.log(sampleArray)
+
+                                                //just to show the adding of the lower case array to the sampling array
+                                                console.log("Lower case is " + lowerOption.checked + " so add it");
+                                                console.log(sampleArray)
         }
 
-        //add upper case letters to array if selected
+        //add upper case letters to sampling array if selected
         if (upperOption.checked == true) {
             sampleArray = sampleArray.concat(upperCaseArray);
-            
-        console.log("Upper case is " + upperOption.checked + " so add it");      
-        console.log(sampleArray)
+
+                                                //just to show the adding of the upper case array to the sampling array
+                                                console.log("Upper case is " + upperOption.checked + " so add it");
+                                                console.log(sampleArray)
         }
 
-        //add numeric characters to array if selected
+        //add numeric characters to sampling array if selected
         if (numericOption.checked == true) {
             sampleArray = sampleArray.concat(numericArray)
-        
-        console.log(`Numeric is ${numericOption.checked} so add it to master array`);
-        console.log(sampleArray)
+
+                                                //just to show the adding of the numeric array to the sampling array
+                                                console.log(`Numeric is ${numericOption.checked} so add it to master array`);
+                                                console.log(sampleArray)
         }
 
-        //add special characters to array if selected
+        //add special characters to sampling array if selected
         if (specialOption.checked == true) {
             sampleArray = sampleArray.concat(specialArray)
-        
-        console.log("Special is " + specialOption.checked) + "so add it";
-        console.log(sampleArray)
+
+                                                //just to show the adding of the special array to the sampling array
+                                                console.log("Special is " + specialOption.checked) + "so add it";
+                                                console.log(sampleArray)
         }
 
-//genertaing the random selections from the master array
+        //generataing the random selections from the sampling array
 
-       for (i=0; i < passwordNumber; i++) {
-            currentPWitem = sampleArray [Math.floor(Math.random() * Math.floor(sampleArray.length))];
+        for (i = 0; i < passwordNumber; i++) {
+            currentPWitem = sampleArray[Math.floor(Math.random() * Math.floor(sampleArray.length))];
 
-            console.log(`randamly chosen item is ${currentPWitem}`);
+                                                //just to show that a random letter has been selected
+                                                console.log(`Randamly chosen item is ${currentPWitem}`);
 
             //adding the selected letter to the end of the password string
             PWFinal = PWFinal.concat(currentPWitem);
 
-            console.log ("add it to end of password  " + PWFinal);
-            
+                                                //just to show the working password array as each letter is added
+                                                console.log("Add it to end of password  " + PWFinal);
+
         }
 
-        console.log (`Password result: ${PWFinal}`);
+        console.log(`Password result: ${PWFinal}`);
 
         /*window.open("./result.html","_self");*/
 
         /*copy password to clipboard*/
 
-        
+
         console.log("Copy to Clipboard is " + copyOption.checked);
 
         /*var copyText = document.querySelector(PWFinal);
@@ -102,6 +107,5 @@ document.getElementById("submit-btn").addEventListener("click", function (event)
 
             not currently working*/
 
-    } else {
-    }
+    } else {}
 });

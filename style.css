@@ -15,6 +15,10 @@ p { font-size: 1.2em;
 
 }
 
+#password {
+  width: auto;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   h1 {
