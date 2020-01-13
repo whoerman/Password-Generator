@@ -2,9 +2,10 @@
 let lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 let upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 let numericArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-let specialArray = ["~", "@", "#", "*", "<"];
+let specialArray = ["~", "!", "#", "*", "<"];
 let sampleArray = [];
 let PWFinal =""
+var copyPW = ""
 
 // setting the data from  checkboxes for when button clicked 
 let lowerOption = document.getElementById("lowerCase");
@@ -85,16 +86,40 @@ document.getElementById("generate-btn").addEventListener("click", function (even
 
         //alerting it because I can't display it to the page
         console.log(`Password result: ${PWFinal}`);
-        window.alert(`Your passord is ${rangeInput} characters long.
-        
-        Your password is 
+        window.alert(`Your password is:
         ${PWFinal}
-        
-        You can copy it by highlighting it and copying it.`);
+        Your password is ${rangeInput} characters long.`);
+
+        //putting the local variable into a global variable to force the result out of the function
+        copyPW ="";
+        copyPW = copyPW.concat(PWFinal);
         
 
 });
 
 document.getElementById("copy-btn").addEventListener("click", function (event) {
-    alert("sorry, this button does not work yet")
+    
+    alert(   `Sorry, this button does not work yet.
+
+            Your password is 
+                ${copyPW}
+        
+        `);
+
+        //area where I am making a valiant attempt to copy it to the clipboard
+       /* var copyPWClipboard = document.querySelector(copyPW);
+            console.log(copyPWClipboard)
+            copyPWClipboard.select();
+            document.execCommand("copy"); */
+
+          /*  var dummyContent = val(copyPW)
+            var dummy = $('<input>').val(dummyContent).appendTo('body').select()
+            document.execCommand('copy') */
+
+          /*  function copyImage(copyPW) {
+                var temp = copyPW;
+                temp.execCommand("Copy");
+                }*/
+
+        
 });
