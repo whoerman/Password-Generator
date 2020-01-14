@@ -99,30 +99,8 @@ document.getElementById("generate-btn").addEventListener("click", function (even
 });
 
 document.getElementById("copy-btn").addEventListener("click", function (event) {
-
-    
-    
-    alert(   `Sorry, this button does not work yet.
-
-            Your password is 
-                ${copyPW}
-        
-        `);
-
-        //area where I am making a valiant attempt to copy it to the clipboard
-       /* var copyPWClipboard = document.querySelector(copyPW);
-            console.log(copyPWClipboard)
-            copyPWClipboard.select();
-            document.execCommand("copy"); */
-
-          /*  var dummyContent = val(copyPW)
-            var dummy = $('<input>').val(dummyContent).appendTo('body').select()
-            document.execCommand('copy') */
-
-          /*  function copyImage(copyPW) {
-                var temp = copyPW;
-                temp.execCommand("Copy");
-                }*/
-
-        
+        var text = document.getElementById("PWBox");
+        text.select();
+        document.execCommand("copy");
+        alert("Your password has been copied to your computer clipboard.");
 });

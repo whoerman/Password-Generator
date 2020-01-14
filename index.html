@@ -89,11 +89,12 @@
             <button type="submit" class="btn btn-success m-1" id="copy-btn">Copy the password to the clipboard</button>
           </div>
           <hr>
-          <h2>Your Password is:</h2>
-          <div class="alert alert-primary" role="alert">
-            <h3 id="PWBox"></h3>
+          <div class="container">
+            <div class="row col-sm-12  m-3 justify-content-around">
+              <h4>Here is your generated password:</h4>
+            <textarea readonly class="col-sm-12" id="PWBox" placeholder="Your Secure Password"  aria-label="Generated Password" ></textarea>
           </div>
-          <hr>
+        </div>
 
           <!-- link to my javascript-->
           <script type="text/javascript" src="myjs.js">
