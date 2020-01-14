@@ -7,23 +7,26 @@ body {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 
 h1 {
   font-size: 1.2em;
 }
+
 @media (min-width: 768px) {
   h1 {
     font-size: 1.4em;
   }
 }
+
 @media (min-width: 992px) {
   h1 {
     font-size: 1.5em;
   }
 }
+
 @media (min-width: 1200px) {
   h1 {
     font-size: 1.8em;
