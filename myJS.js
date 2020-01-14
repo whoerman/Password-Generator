@@ -84,20 +84,23 @@ document.getElementById("generate-btn").addEventListener("click", function (even
 
         }
 
-        //alerting it because I can't display it to the page
-        console.log(`Password result: ${PWFinal}`);
-        window.alert(`Your password is:
-        ${PWFinal}
-        Your password is ${rangeInput} characters long.`);
+        //writing it to the page
+        var insertPW = document.getElementById("PWBox");
+        insertPW.textContent = PWFinal;
+        document.body.PWBox.appendChild(insertPW);
 
         //putting the local variable into a global variable to force the result out of the function
         copyPW ="";
         copyPW = copyPW.concat(PWFinal);
+
+
         
 
 });
 
 document.getElementById("copy-btn").addEventListener("click", function (event) {
+
+    
     
     alert(   `Sorry, this button does not work yet.
 
