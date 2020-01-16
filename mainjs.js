@@ -86,7 +86,6 @@ document.getElementById("generate-btn").addEventListener("click", function (even
     //writing it to the page
     var insertPW = document.getElementById("PWBox");
     insertPW.textContent = PWFinal;
-    document.body.PWBox.appendChild(insertPW);
 
 });
 
