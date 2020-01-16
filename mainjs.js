@@ -88,12 +88,12 @@ document.getElementById("generate-btn").addEventListener("click", function (even
     insertPW.textContent = PWFinal;
     document.body.PWBox.appendChild(insertPW);
 
-
 });
 
 //button to copy to clipboard
 
 document.getElementById("copy-btn").addEventListener("click", function (event) {
+    console.log(event);
     var text = document.getElementById("PWBox");
     text.select();
     document.execCommand("copy");
