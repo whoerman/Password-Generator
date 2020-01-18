@@ -22,5 +22,5 @@ When copy button is clicked, the password is copied to the clipboard
 extensive console logs have purposefully left in to show program operation if desired
 
 Current unsolved issues:
-an error on AppendChild
+checkboxes are small - bootstrap makes it difficult to enlarge
 
